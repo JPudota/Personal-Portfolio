@@ -247,7 +247,9 @@ article.active {
 .clients-item img {
   height: 40px;
   object-fit: contain;
-}				   
+}
+
+
 .article-title::after {
   content: "";
   position: absolute;
@@ -478,7 +480,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  list-style: none;				   
+  list-style: none;
 }
 
 .navbar-link {
@@ -526,7 +528,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  list-style: none;				   
+  list-style: none;
 }
 
 .service-item {
@@ -583,7 +585,7 @@ main {
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
-  list-style: none;				   
+  list-style: none;
 }
 
 .testimonials-item {
@@ -741,14 +743,10 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-				  
   padding: 25px;
-					   
   overflow-x: auto;
   scroll-behavior: smooth;
   list-style: none;
-									 
-							  
 }
 
 .clients-item {
@@ -792,7 +790,7 @@ main {
 .timeline-list {
   font-size: var(--fs-6);
   margin-left: 45px;
-  list-style: none;				   
+  list-style: none;
 }
 
 .timeline-item { position: relative; }
@@ -809,7 +807,7 @@ main {
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
   line-height: 1.6;
-  list-style: none;				   
+  list-style: none;
 }
 
 .timeline-item:not(:last-child)::before {
@@ -847,8 +845,8 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
-  list-style: none;					
+.skills-list { padding: 20px; 
+  list-style: none;}
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
@@ -887,8 +885,8 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
-.filter-list { display: none; }
-  list-style: none;					
+.filter-list { display: none; 
+  list-style: none;}
 
 .filter-select-box {
   position: relative;
@@ -924,14 +922,14 @@ main {
   visibility: hidden;
   pointer-events: none;
   transition: 0.15s ease-in-out;
-  list-style: none;				   
+  list-style: none;
 }
 
 .filter-select.active + .select-list {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  list-style: none;				   
+  list-style: none;
 }
 
 .select-item button {
@@ -952,7 +950,7 @@ main {
   grid-template-columns: 1fr;
   gap: 30px;
   margin-bottom: 10px;
-  list-style: none;				   
+  list-style: none;
 }
 
 .project-item { display: none; }
@@ -1056,7 +1054,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  list-style: none;				   
+  list-style: none;
 }
 
 .blog-post-item > a {
@@ -1378,7 +1376,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .separator { margin: 32px 0; }
 
   .contacts-list { gap: 20px; 
-  list-style: none;  }
+    list-style: none;}
 
   .contact-info {
     max-width: calc(100% - 64px);
@@ -1394,7 +1392,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .navbar { border-radius: 20px 20px 0 0; }
 
   .navbar-list { gap: 20px; 
-  list-style: none;  }
+    list-style: none;}
 
   .navbar-link { --fs-8: 14px; }
 
@@ -1470,6 +1468,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 30px;
     border-radius: 20px;
   }
+
+  .avatar-box img {
+    border-radius: 15px; /* Adjust the value for more or less rounded corners */
+  }
+  
 
   .modal-img-wrapper {
     display: flex;
@@ -1899,3 +1902,84 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+article.about {
+  color: var(--light-gray);
+}
+
+.custom-bullets li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.custom-bullets li::before {
+  content: "🔥"; /* You can use any emoji or icon */
+  position: absolute;
+  left: 0;
+  color: rgb(254, 196, 98);
+}
+.back-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #313234;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #313335;
+}
+/* ...............................................*/
+
+.project-img img {
+  width: 100%;
+  height: 200px; /* or any size you prefer */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px; /* optional, for rounded edges */
+}
+
+
+  .carousel-caption {
+    font-family: 'Arial'; /* Change font family */
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    font-style: italic; /* Make the text italic */
+    color: var(--light-gray); /* Change text color */
+    text-align: center; /* Center align the text */
+  }
+
+  .blog-post {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .blog-post h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-post .post-meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .blog-content a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
