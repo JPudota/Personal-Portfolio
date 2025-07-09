@@ -160,14 +160,14 @@
   </a>
 
   <header>
-    <h1>Property Analysis - Sprint 1</h1>
-    <p>Designed and implemented a structured ETL pipeline using SSIS, with multi-layered data loading and transformation, following Snowflake schema principles.</p>
+    <h1>Property Analysis - Advanced Sprint 2</h1>
+    <p>To build a suite of interactive SSRS reports that allow users to analyze real estate and community data by selecting a specific state, city, and suburb, supporting data-driven decision-making in property investment and community planning.</p>
   </header>
 
   <div class="carousel-container" style="max-width: 700px; margin: 2rem auto; position: relative;">
-    <img class="carousel-image" src="../assets/images/competetion1/ETL_Pipeline.png"
+    <img class="carousel-image" src="../assets/images/advanced2/RentalValueWP.png"
       style="max-width: 100%; max-height: 400px; object-fit: contain; display: block; margin: 0 auto; border-radius: 10px;" />
-    <p class="carousel-caption" style="text-align: center; margin-top: 10px;">End-to-End SSIS ETL Pipeline from raw source to Snowflake schema.</p>
+    <p class="carousel-caption" style="text-align: center; margin-top: 10px;">RentalValue report executed on SSRS Web Portal with location filters and rental highlights</p>
 
     <button class="carousel-btn left" onclick="changeSlide(-1)"
       style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; cursor: pointer;">❮</button>
@@ -178,22 +178,35 @@
   <section class="project-detail" style="padding: 2rem;">
     <h2>Project Overview</h2>
     <ul style="list-style-type: disc; padding-left: 40px;">
-      <li>To design and implement a structured ETL pipeline using SSIS that transforms raw property and school data into a Snowflake-modeled data warehouse, enabling accurate and efficient reporting.</li>
-      <li><strong>Tools Used:</strong> SQL Server | SSIS | Snowflake Schema</li>
+      <li>This project demonstrates the use of SQL Server Reporting Services (SSRS) to develop dynamic, parameter-driven reports from a dimensional Data Warehouse model. The solution is designed to help users explore key real estate metrics such as property values, rental trends, transport access, school zones, and crime rates at varying geographic levels (state, city, and suburb).</li>
+      <li><strong>Tools Used:</strong> SQL Server | SSRS (SQL Server Reporting Services) | SSMS</li>
+      <li><strong>Techniques:</strong> Cascading parameters (State → City → Suburb), Conditional formatting, indexes</li>
     </ul>
 <br>
 
-<h2>📈 What I Did</h2><br>
+<h2>What I Did</h2>
 <div style="padding-left: 40px;">
   
   <ul>
-    <li>Extracted raw Excel files and loaded them into load_* staging tables.</li>
-    <li>Performed initial transformations using load_* as source, and loaded results into intermediate stage_* tables.</li>
-    <li>Applied business rules using Derived Columns (e.g., property value categorization).</li>
-    <li>Used Lookup transformations to fetch foreign keys from dimension tables.</li>
-    <li>Final cleaned data was loaded into Dim_* and Fact_* tables structured in a Snowflake schema.</li>
-    <li>Fact table: <code>FactProperty</code></li>
-    <li>Dimension tables: <code>DimSuburb</code>, <code>DimSchool</code>, <code>DimDate</code></li>
+    <li>Connected SSRS to the Data Warehouse using SQL Server data source.</li>
+    <li>Wrote optimized T-SQL queries for data retrieval</li>
+    <li>Developed five separate SSRS reports with tailored layouts (table format)</li>
+    <li>Implemented cascading parameters to enable intuitive user filtering.</li>
+    <li>Applied styling and logic-based formatting to highlight key metrics.</li>
+    <li>Validated data and improved load time with indexing strategy.</li>
+    
+    </ul>
+  <br>
+
+</div>
+
+<h2>Tables Used</h2>
+<div style="padding-left: 40px;">
+  <ul>
+
+    <li><code>DimSuburb</code>, <code>DimSchool</code>, <code>DimTransport</code>
+    <code>FactCrime</code>, <code>FactHouseValue</code>, <code>FactRentalValue</code></li>
+    
     </ul>
   <br>
 
@@ -202,23 +215,23 @@
 
     <h2>Key Deliverables</h2>
     <ul style="padding-left: 40px;">
-      <li>Multi-layered SSIS ETL pipeline (Load → Stage → Dim/Fact).</li>
-      <li>Composite primary key creation at staging level (Postcode + Suburb) for uniqueness.</li>
-      <li>Property categorization using Derived Columns and Conditional Splits.</li>
-      <li>Snowflake schema with normalized dimensions and lookup-driven relationships.</li>
-      <li>Clean, query-ready data warehouse prepared for BI consumption.</li>
+      <li>House Value Report – Displays average house values by city with conditional formatting.</li>
+      <li>Rental Value Report – Shows rental trends with visual highlights for high-rent areas.</li>
+      <li>Transport Stations Report – Lists local public transport options per state, city, suburb</li>
+      <li>School Locator Report – Identifies nearby schools within the selected location.</li>
+      <li>Crime Summary Report – Summarizes recorded crime recorded incidents at the [offence category] level</li>
     </ul>
 
     <br>
 
     <h2>Links</h2>
     <ul style="padding-left: 40px;">
-      <li><a href="https://github.com/JPudota/property_analysis" target="_blank">GitHub Repo</a></li>
+      <li><a href="https://github.com/JPudota/Australia_Property_Analysis" target="_blank">GitHub Repo</a></li>
     </ul>
 
     <br><br>
 
-    <p><a href="../index.html#projects" class="back-btn">Back to Projects</a></p>
+    <p><a href="../index.html#projects" class="back-btn">Back to Portfolio</a></p>
   </section>
 </article>
 
@@ -244,16 +257,30 @@
 
   <script>
     const images = [
-      "../assets/images/competetion1/ETL_Pipeline.png",
-      "../assets/images/competetion1/Successful_ETL_Pipeline.png",
-      "../assets/images/competetion1/DBdiagram.png"
+      "../assets/images/advanced2/HouseValue.png",
+      "../assets/images/advanced2/HouseValueWP.png",
+   "../assets/images/advanced2/RentalValue.png",
+      "../assets/images/advanced2/RentalValueWP.png",
+   "../assets/images/advanced2/Schools.png",
+      "../assets/images/advanced2/SchoolsWP.png",
+         "../assets/images/advanced2/CrimeReport.png",
+      "../assets/images/advanced2/CrimeReportWP.png",
+         "../assets/images/advanced2/Transport.png",
+      "../assets/images/advanced2/TransportWP.png"
       
 
     ];
     const captions = [
-  "End-to-End SSIS ETL Pipeline from raw source to Snowflake schema.",
-  "SSIS ETL pipeline executed successfully, validating all data transfers from raw files to Dim and Fact tables.",
-  "Snowflake schema design illustrating relationships between Fact and Dimension tables."
+  "SSRS Design View: HouseValue report with parameters and conditional formatting.",
+  "HouseValue report executed on SSRS Web Portal with location filters and value highlights.",
+  "SSRS Design View: RentalValue report with cascading filters and value highlights.",
+  "RentalValue report executed on SSRS Web Portal with location filters and rental highlights.",
+  "SSRS Design View: Schools report filtered by state, city, and suburb.",
+  "Schools report executed on SSRS Web Portal showing filtered nearby schools.",
+  "SSRS Design View: Crime report summarizing incidents by [offence category].",
+  "Crime report executed on SSRS Web Portal summarizing incidents by [offence category].",
+  "SSRS Design View: Transport report with state, city, and suburb filters.",
+  "Transport report executed on SSRS Web Portal listing local stations by location."
 ];
     
   
